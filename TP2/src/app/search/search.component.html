@@ -1,0 +1,24 @@
+<form [formGroup]="searchGroup" class="d-flex flex-column col-4 m-3">
+    <div formGroupName="monstersGroup">
+        <mat-slide-toggle formControlName="controlMonsters" name="monstercheck" class="mt-4"> 
+        Monsters (value: {{checkedMonsters}})
+        </mat-slide-toggle>
+        <mat-slide-toggle formControlName="controlCreaturesFood" name="creaturesFoodcheck" class="mt-4"> 
+        Creatures (no food) (value: {{checkedCreaturesFood}})
+        </mat-slide-toggle>
+        <mat-slide-toggle formControlName="controlCreaturesNoFood" name="creaturesNoFoodcheck" class="mt-4"> 
+        Creatures (food) (value: {{checkedCreaturesNoFood}})
+        </mat-slide-toggle>
+    </div>
+
+    <mat-form-field *ngIf="checkedCreaturesNoFood" class="mt-4">
+        <mat-label>Select the cooking effect</mat-label>
+        <mat-select-trigger>{{ displayEffect() }}</mat-select-trigger>
+        <mat-select formControlName="controlEffect" multiple>
+            <mat-option *ngFor="let effect of listEffects" [value]="effect">{{ effect }}</mat-option>
+        </mat-select>
+    </mat-form-field>  
+</form>
+
+<app-list [dataList]="filteredData" *ngIf="filteredData.length > 0"></app-list>
+  

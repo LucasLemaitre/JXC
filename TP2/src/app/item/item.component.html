@@ -1,0 +1,11 @@
+<mat-card class="card">
+    <mat-card-title class="d-flex justify-content-center">{{myData.name | titlecase }}</mat-card-title>
+    <a [routerLink]="['/entry', myData.id]" routerLinkActive="active">
+        <img mat-card-image [src]="myData.image" [alt]="myData.name">
+    </a>
+    <!--<mat-card-content>
+        <p>
+        {{ myData.description }}
+        </p>
+    </mat-card-content>!-->
+</mat-card>

@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <img src="../assets/images/triforce.png" alt="Triforce" width="60" class="mx-3">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Monsters <span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Creatures <span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Search <span class="sr-only"></span></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <img src="../assets/images/triforce.png" alt="Triforce" width="60" class="mx-3" [routerLink]="['/home']" routerLinkActive="active">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" [routerLink]="['/monsters']" routerLinkActive="active">Monsters <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="['/creatures']" routerLinkActive="active">Creatures <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#"[routerLink]="['/search']" routerLinkActive="active">Search <span class="sr-only"></span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
